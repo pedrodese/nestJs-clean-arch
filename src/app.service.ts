@@ -1,13 +1,9 @@
-import { HttpStatus, Injectable } from '@nestjs/common';
+import { Injectable, HttpStatus } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
 
-  getApplicationStatus(): string {
-    return 'Application Up!'
-  }
-
-  getHello(): string {
-    return 'Hello World!';
+  getApplicationStatus(): HttpStatus {
+    return HttpStatus.OK
   }
 }
